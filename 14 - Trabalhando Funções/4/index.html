@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalhando Funções - JavaScript</title>
+</head>
+<body>
+
+    <input type="text" id="numeros" placeholder="Digite números (ex: 10, 20, 30)">
+    <button onclick="calcular()">Calcular Média</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularMedia(array) {
+            let soma = 0;
+            for (let i = 0; i < array.length; i++) {
+                soma += array[i];
+            }
+            return soma / array.length;
+        }
+
+        function calcular() {
+            let entrada = document.getElementById("numeros").value;
+            let listaStrings = entrada.split(",");
+            let listaNumeros = [];
+
+            for (let i = 0; i < listaStrings.length; i++) {
+                listaNumeros.push(Number(listaStrings[i].trim()));
+            }
+
+            let media = calcularMedia(listaNumeros);
+            document.getElementById("resultado").innerText = "A média é: " + media.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

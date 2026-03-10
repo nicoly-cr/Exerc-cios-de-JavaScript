@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Arrays - JavaScript</title>
+    </head>
+    <body>
+        
+        <!--Bloco JavaScript - Arrays-->
+        
+        <script>
+
+            //Todos os nomes.
+            let nomes = ["Ana", "Bruno", "Carlos", "Daniela", "Eduardo", "Gabriel", "Helena"];
+
+            for (let i = 0; i < nomes.length; i++){
+                console.log(nomes[i]);
+            }
+
+            nomes.forEach(element => {
+                console.log(element);
+            });
+        
+            //Os nomes que começam com A.
+            let nomes10 = ["Ana", "Bruno", "Carlos", "Daniela", "Alice", "Eduardo", "Gabriel", "Helena", "Antônio", "Davi"];
+
+            for (let i = 0; i < nomes10.length; i++) {
+                if (nomes10[i].startsWith("A")) {
+                    console.log(nomes10[i]);
+                }
+            }
+
+            nomes10.forEach(element => {
+                if (element.startsWith("A")) {
+                    console.log(element);
+                }
+            });
+
+            //Os nomes palíndromos.
+            let nomesP = ["Ana", "Bruno", "Carlos", "Daniela", "Alice", "Eduardo", "Gabriel", "Helena", "Antônio", "Davi"];
+
+            nomesP.forEach(element => {
+                let nomeOriginal = element.toLowerCase();
+                let nomeInvertido = nomeOriginal.split("").reverse().join("");
+
+                if (nomeOriginal === nomeInvertido) {
+                    console.log(element);
+                }
+            });
+
+            //Todos os números pares.
+            let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            
+            for (let i = 0; i < numeros.length; i++) {
+                if (numeros[i] % 2 == 0) {
+                    console.log(numeros[i]);
+                }
+            }
+
+            numeros.forEach(element => {
+                if (element % 2 == 0) {
+                    console.log(element);
+                }
+            });
+
+            //Todos os números maiores que 5.
+            let numeros2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            for (let i = 0; i < numeros.length; i++) {
+                if (numeros2[i] > 5) {
+                    console.log(numeros[i]);
+                }
+            }
+
+            numeros2.forEach(element => {
+                if (element > 5) {
+                    console.log(element);
+                }
+            });
+
+        </script>
+
+    </body>
+</html>

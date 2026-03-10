@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title> Calculadora Simples - JavaScript</title>
+    </head>
+    <body>
+
+        <h2>Soma de Dois Números</h2>
+
+        <input type="number" id="num1" placeholder="Digite o primeiro número">
+        <br><br>
+
+        <input type="number" id="num2" placeholder="Digite o segundo número">
+        <br><br>
+
+        <select id="operacao">
+                <option value="soma">Somar (+)</option>
+                <option value="subtracao">Subtrair (−)</option>
+                <option value="multiplicacao">Multiplicar (×)</option>
+                <option value="divisao">Dividir (÷)</option>
+            </select>
+
+        <button onclick="calcular()">Calcular</button>
+
+        <p id="resultado"></p>
+        <br>
+        <br>
+
+
+    <!--Bloco JavaScript-->
+    <script>
+        function calcular() {
+        
+            let n1 = document.getElementById("num1").value;
+            let n2 = document.getElementById("num2").value;
+            let op = document.getElementById("operacao").value;
+            let campoResultado = document.getElementById("resultado");
+
+            if (n1 === "" || n2 === "") {
+                campoResultado.innerText = "⚠️ Preencha todos os campos!";
+                return;
+            }
+
+            n1 = Number(n1);
+            n2 = Number(n2);
+            let resultado;
+
+            switch (op) {
+                case "soma":
+                    resultado = n1 + n2;
+                    break;
+                case "subtracao":
+                    resultado = n1 - n2;
+                    break;
+                case "multiplicacao":
+                    resultado = n1 * n2;
+                    break;
+                case "divisao":
+                    resultado = n2 !== 0 ? n1 / n2 : "Erro (divisão por 0)";
+                    break;
+            }
+
+            campoResultado.innerText = "Resultado: " + resultado;
+        }
+
+    </script>
+</body>

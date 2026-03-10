@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Trabalhando Funções - JavaScript</title>
+    </head>
+    <body>
+
+        <input type="number" id="n" placeholder="Digite um número">
+        <button onclick="calcularSoma()">Calcular Fatorial</button>
+        <p id="resultado"></p>
+
+        <script>
+            function fatorial(n) {
+                let resultado = 1;
+                for (let i = n; i > 1; i--) {
+                    resultado *= i;
+                }
+                return resultado;
+            }
+
+            function calcularSoma() {
+                let nVal = Number(document.getElementById("n").value);
+                let resultadoFinal = fatorial(nVal);
+                document.getElementById("resultado").innerText = "Resultado do Fatorial: " + resultadoFinal;
+            }
+        </script>
+
+    </body>
+</html>

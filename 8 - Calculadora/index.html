@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora - JavaScript</title>
+</head>
+<body>
+    
+    <!--Bloco JavaScript - Calculadora-->
+
+    <script>
+    
+        let opcao = prompt(
+        "Escolha uma opção: \n" +
+        "1- Somar \n" + 
+        "2- Subtrair \n" +
+        "3- Multiplicar \n" + 
+        "4- Dividir \n");
+
+        let num1 =  Number(prompt("Digite o primeiro número: "));
+        let num2 =  Number(prompt("Digite o segundo número: "));
+
+        let resultado;
+
+        switch (opcao){
+            case "1":
+                resultado = num1 + num2;
+                alert("Resultado da soma: " + resultado);
+                break;
+            case "2":
+                resultado = num1 - num2;
+                alert("Resultado da subtração: " + resultado);
+                break;
+            case "3":
+                resultado = num1 * num2;
+                alert("Resultado da multiplicação: " + resultado);
+                break;
+            case "4":
+                if (num2 !== 0){
+                    resultado = num1 / num2;
+                    alert("Resultado da divisão: " + resultado);
+                } else {
+                    alert("Erro: divisão por zero não é permitido.")
+                }
+                break;
+            default:
+                alert("Opção inválida.");
+                break;
+        }
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalhando Funções - JavaScript</title>
+</head>
+<body>
+
+    <h3>Celsius para Fahrenheit</h3>
+    <input type="number" id="celsius" placeholder="Graus Celsius">
+    <button onclick="converterParaF()">Converter</button>
+    <p id="resF"></p>
+
+    <hr>
+
+    <h3>Fahrenheit para Celsius</h3>
+    <input type="number" id="fahrenheit" placeholder="Graus Fahrenheit">
+    <button onclick="converterParaC()">Converter</button>
+    <p id="resC"></p>
+
+    <script>
+        function converterParaF() {
+            let c = Number(document.getElementById("celsius").value);
+            let f = (c * 1.8) + 32;
+            document.getElementById("resF").innerText = "Resultado: " + f.toFixed(2) + "°F";
+        }
+
+        function converterParaC() {
+            let f = Number(document.getElementById("fahrenheit").value);
+            let c = (f - 32) / 1.8;
+            document.getElementById("resC").innerText = "Resultado: " + c.toFixed(2) + "°C";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mudança de Cor - JavaScript</title>
+    </head>
+    <body>
+        <h2>Selecione a cor do fundo desejada.</h2>
+
+        <button onclick="mudarCor('blue')">Azul</button>
+        <button onclick="mudarCor('green')">Verde</button>
+        <button onclick="mudarCor('purple')">Roxo</button>
+        <button onclick="mudarCor('yellow')">Amarelo</button>
+        <button onclick="mudarCor('orange')">Laranja</button>
+        <button onclick="mudarCor('pink')">Rosa</button>
+        <button onclick="mudarCor('cyan')">Ciano</button>
+
+        <br>
+        <br>
+
+        <div class="card">
+        </div>
+
+        <script>
+            function mudarCor(cor) {
+                document.body.style.backgroundColor = cor;
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalhando Funções - JavaScript</title>
+</head>
+<body>
+
+    <input type="text" id="lista" placeholder="Digite números (ex: 1, 2, 3, 4)">
+    <button onclick="filtrar()">Mostrar Pares</button>
+    <p id="resultado"></p>
+
+    <script>
+        function retornarPares(array) {
+            let pares = [];
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 2 === 0) {
+                    pares.push(array[i]);
+                }
+            }
+            return pares;
+        }
+
+        function filtrar() {
+            let entrada = document.getElementById("lista").value;
+            let listaStrings = entrada.split(",");
+            let listaNumeros = [];
+
+            for (let i = 0; i < listaStrings.length; i++) {
+                let num = Number(listaStrings[i].trim());
+                if (!isNaN(num)) {
+                    listaNumeros.push(num);
+                }
+            }
+
+            let apenasPares = retornarPares(listaNumeros);
+            document.getElementById("resultado").innerText = "Números pares: " + apenasPares.join(", ");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalhando Funções - JavaScript</title>
+</head>
+<body>
+
+    <input type="text" id="texto" placeholder="Digite uma frase">
+    <button onclick="executar()">Contar Vogais</button>
+    <p id="resultado"></p>
+
+    <script>
+        function contarVogais(texto) {
+            let vogais = "aeiouAEIOU";
+            let contador = 0;
+
+            for (let i = 0; i < texto.length; i++) {
+                if (vogais.indexOf(texto[i]) !== -1) {
+                    contador++;
+                }
+            }
+            return contador;
+        }
+
+        function executar() {
+            let t = document.getElementById("texto").value;
+            let total = contarVogais(t);
+            document.getElementById("resultado").innerText = "Resultado: " + total;
+        }
+    </script>
+
+</body>
+</html>

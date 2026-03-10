@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contador - JavaScript</title>
+    </head>
+    <body>
+        
+        <!--Campo de Interação-->
+        
+        <h2>Contador</h2>
+        
+        <button onclick="diminuir()">-</button>
+        <span id="valor">0</span>
+        <button onclick="aumentar()">+</button>
+        <br>
+        <br>
+        
+        <!--Bloco Java Script-->
+
+        <script>
+            let contador = 0;
+
+                function aumentar(){
+                    contador ++;
+                    atualizarTela();
+                }
+
+                function diminuir(){
+                    contador --;
+                    atualizarTela();
+                }
+
+                function atualizarTela(){
+                    document.getElementById("valor").innerText = contador;
+                }
+        </script>
+
+    </body>
+</html>
